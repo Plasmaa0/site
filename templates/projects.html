@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Projects</title>
+{% endblock %}
+
+{% block head %}
+<style>
+    #projects {
+        background-position: 100% 100%;
+    }
+</style>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="projects-table">
+    {% for project in projects %}
+    <a href="/projects/{{project.id}}">
+        <div class="project-template">
+            <img class="project-image" src="{{ url_for('static', filename='images/'+project.id|string +'.png') }}"
+                alt="image for {{project.name}}">
+            <div class="project-text">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.shortDescription }}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Contacts</title>
+{% endblock %}
+
+{% block head %}
+<style>
+    #contacts {
+        background-position: 100% 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{% for contact in contacts %}
+<div class="contact">
+    <h3>{{ contact.name }}</h3>
+    <a href="">{{contact.link}}</a>
+</div>
+{% endfor %}
+{% endblock %}

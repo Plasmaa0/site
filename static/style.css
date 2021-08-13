@@ -1,0 +1,148 @@
+/* :root{
+    --textPrimary: #003B73; 
+    --textSecondary: #0074B7; 
+    --backgroundDark: #60A3D9;
+    --backgroundMiddle: #9dc9f1;
+    --backgroundLight: #BFD7ED;
+    --highlight: darkcyan;
+} */
+
+:root{
+    --textPrimary: #FF1E56; /*темно синий*/
+    --textSecondary: #FFAC41; /*синий*/
+    --backgroundDark: #6FDE8030; /*голубой*/
+    --backgroundMiddle: #323232;
+    --backgroundLight: #555555; /*голубо-серый*/
+    --highlight: #6FDE8070;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lucida Sans Unicode';
+}
+
+body{
+    background: var(--backgroundLight);
+}
+
+header{
+    background: var(--backgroundMiddle);
+    text-align: justify;
+    height: auto;
+    padding: 2em 0;
+    color: var(--textPrimary);
+    width: 100%;
+}
+
+header h1,
+header nav{
+    display: inline-block;
+    margin: 0 5%;
+}
+
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+header h1{
+    font-size: 4em;
+    opacity: 75%;
+    transition-duration: .1s;
+}
+
+header h1:hover{
+    font-size: 4em;
+    opacity: 100%;
+}
+
+header button{
+    font-size: 2em;
+    color: var(--textPrimary); 
+}
+
+a{
+    text-decoration: none;
+    color: var(--textPrimary);
+}
+
+.navbutton a{
+    text-decoration: none;
+    color: var(--textPrimary);
+    display: block; 
+    height: 100%;
+    padding: 1em 2em;
+}
+
+.navbutton{
+    background: linear-gradient(var(--backgroundDark) 50%, var(--highlight) 50%);
+    background-repeat:no-repeat;
+    background-size: 200% 200%;
+    border-radius: 15px;
+    padding: 0;
+    margin: 0px 1em;
+    transition-duration: .4s;
+
+}
+
+.navbutton:hover{
+    background-position: 100% 100% !important;
+}
+
+main{
+    padding: 1em 2%;
+    color: var(--textSecondary);
+    font-size: 2em;
+}
+
+.projects-table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.project-template{
+    padding: 1em;
+    margin: .3em 0px;
+    background: linear-gradient(var(--backgroundDark) 50%, var(--highlight) 50%);
+    background-repeat:no-repeat;
+    background-size: 200% 200%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition-duration: 1s;
+}
+
+.project-template:hover{
+    background-position: 100% 100%;
+}
+
+.project-image{
+    margin: .3em .5em;
+    height: 10%;
+    width: 10%;
+    border-radius: 5px;
+}
+
+.project-text{
+    margin: .3em;
+    color: var(--textSecondary);
+}
+
+.contact{
+    background-color: var(--backgroundDark);
+    margin: 1% 0px;
+    padding: 1%;
+    border-radius: 10px;
+}
+.contact h3{
+    color: var(--textPrimary);
+}
+.contact a{
+    color: var(--textSecondary);
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+    button.back {
+        font-size: 1.5em;
+        margin: 2%;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+<title>{{project.name}}</title>
+{% endblock %}
+
+{% block pre %}
+<button class='navbutton back'><a href="/projects">Go back</a></button>
+{% endblock %}
+
+{% block content %}
+<div class="">
+    <img class="project-image" src="{{ url_for('static', filename='images/'+project.id|string +'.png') }}"
+        alt="image for {{project.name}}">
+    <h1>{{project.name}}</h1>
+    <p>{{project.shortDescription}}</p>
+    <br>
+    {% if project.video %}
+    <img class="project-image" src="{{ url_for('static', filename='images/'+project.id|string +'.gif') }}"
+        alt="video for {{project.name}}">
+    {% endif %}
+    <p>{{project.description}}</p>
+
+    {% if project.download %}
+    <a href="{{ url_for('static', filename='downloads/'+project.id|string +'.rar') }}">Link</a>
+    {% endif %}
+</div>
+{% endblock %}

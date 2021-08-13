@@ -1,0 +1,10 @@
+[
+    {
+        "id": 0,
+        "name": "AI for simple game",
+        "shortDescription": "Minimax with alpha beta pruning",
+        "description": "description 1 description 1 description 1 description 1 description 1",
+        "download": true,
+        "video": true
+    }
+]

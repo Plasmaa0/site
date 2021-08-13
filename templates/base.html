@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {%endblock%}
+    {% block head %}
+    {%endblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <script src="{{ url_for('static', filename='navbar.js') }}"></script> -->
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/index">Andrey Kuprin</a>
+        </h1>
+        <nav>
+            <button class='navbutton' id='about'><a href="/about">About</a></button>
+            <button class='navbutton' id='projects'><a href="/projects">Projects</a></button>
+            <button class='navbutton' id='contacts'><a href="/contacts">Contacts</a></button>
+        </nav>
+    </header>
+    {% block pre %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>
